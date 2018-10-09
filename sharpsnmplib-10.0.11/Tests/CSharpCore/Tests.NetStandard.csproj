@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup Label="Configuration">
+    <RootNamespace>Lextm.SharpSnmpLib</RootNamespace>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>sharpsnmplib.tests.snk</AssemblyOriginatorKeyFile>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">True</PublicSign>
+    <AssemblyName>SharpSnmpLib.Tests.NetStandard</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType Condition="'$(TargetFramework)'!='net452'">Exe</OutputType>
+    <TargetFrameworks>netcoreapp2.0;netcoreapp1.1;netcoreapp1.0;net452</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Properties\Resources.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="packages.config" />
+    <None Remove="Tests.csproj.vspscc" />
+    <None Remove="Tests.nuget.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sharpsnmplib.tests.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Reactive.Linq" Version="3.1.1" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <PackageReference Include="Moq" Version="4.8.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'!='net452'">
+    <PackageReference Include="System.Net.Sockets" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SharpSnmpLib.BouncyCastle\SharpSnmpLib.BouncyCastle.csproj" />
+    <ProjectReference Include="..\..\SharpSnmpLib\SharpSnmpLib.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Resources\fivevarbinds.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\get.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\getresponse.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\novarbind.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\onevarbind.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\trapv3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\trapv3auth">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\trapv3authpriv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\twovarbinds.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\v3authNoPriv_BER_Issue">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

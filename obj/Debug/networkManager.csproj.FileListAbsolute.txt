@@ -1,0 +1,13 @@
+C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.csprojAssemblyReference.cache
+C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.Form1.resources
+C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.Properties.Resources.resources
+C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.csproj.GenerateResource.cache
+C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.csproj.CoreCompileInputs.cache
+C:\projects\pucrs\gerenciaDeRedes\networkManager\bin\Debug\networkManager.exe.config
+C:\projects\pucrs\gerenciaDeRedes\networkManager\bin\Debug\networkManager.exe
+C:\projects\pucrs\gerenciaDeRedes\networkManager\bin\Debug\networkManager.pdb
+C:\projects\pucrs\gerenciaDeRedes\networkManager\bin\Debug\SharpSnmpLib.dll
+C:\projects\pucrs\gerenciaDeRedes\networkManager\bin\Debug\SharpSnmpLib.pdb
+C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.csproj.CopyComplete
+C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.exe
+C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.pdb
