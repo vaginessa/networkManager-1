@@ -11,3 +11,15 @@ C:\projects\pucrs\gerenciaDeRedes\networkManager\bin\Debug\SharpSnmpLib.pdb
 C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.csproj.CopyComplete
 C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.exe
 C:\projects\pucrs\gerenciaDeRedes\networkManager\obj\Debug\networkManager.pdb
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\bin\Debug\networkManager.exe.config
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\bin\Debug\networkManager.exe
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\bin\Debug\networkManager.pdb
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\bin\Debug\SharpSnmpLib.dll
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\bin\Debug\SharpSnmpLib.pdb
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.csprojResolveAssemblyReference.cache
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.Form1.resources
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.Properties.Resources.resources
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.csproj.GenerateResource.Cache
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.csproj.CoreCompileInputs.cache
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.exe
+C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.pdb
