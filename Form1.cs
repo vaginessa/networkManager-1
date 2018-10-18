@@ -46,7 +46,7 @@ namespace networkManager
             SetRequestMessage request = new SetRequestMessage(Messenger.NextRequestId,
             VersionCode.V2,
             new OctetString("public"),
-            new List<Variable> { new Variable(new ObjectIdentifier(id), new OctetString(value)) });
+            new List<Variable> { new Variable(new ObjectIdentifier(id), new OctetString(value.ToString())) });
 
             ISnmpMessage reply = request.GetResponse(60000, new IPEndPoint(IPAddress.Parse(LOCALHOST), 161));
             if (reply.Pdu().ErrorStatus.ToInt32() != 0) // != ErrorCode.NoError
