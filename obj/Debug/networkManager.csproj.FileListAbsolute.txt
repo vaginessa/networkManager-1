@@ -23,3 +23,16 @@ C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.cspr
 C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.csproj.CoreCompileInputs.cache
 C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.exe
 C:\Users\Vicenzo\Documents\Gerencia\networkManager\obj\Debug\networkManager.pdb
+C:\Users\GRV\Documents\networkManager\bin\Debug\networkManager.exe.config
+C:\Users\GRV\Documents\networkManager\bin\Debug\networkManager.exe
+C:\Users\GRV\Documents\networkManager\bin\Debug\networkManager.pdb
+C:\Users\GRV\Documents\networkManager\bin\Debug\SharpSnmpLib.dll
+C:\Users\GRV\Documents\networkManager\bin\Debug\SharpSnmpLib.pdb
+C:\Users\GRV\Documents\networkManager\obj\Debug\networkManager.csprojAssemblyReference.cache
+C:\Users\GRV\Documents\networkManager\obj\Debug\networkManager.Form1.resources
+C:\Users\GRV\Documents\networkManager\obj\Debug\networkManager.Properties.Resources.resources
+C:\Users\GRV\Documents\networkManager\obj\Debug\networkManager.csproj.GenerateResource.cache
+C:\Users\GRV\Documents\networkManager\obj\Debug\networkManager.csproj.CoreCompileInputs.cache
+C:\Users\GRV\Documents\networkManager\obj\Debug\networkManager.csproj.CopyComplete
+C:\Users\GRV\Documents\networkManager\obj\Debug\networkManager.exe
+C:\Users\GRV\Documents\networkManager\obj\Debug\networkManager.pdb
