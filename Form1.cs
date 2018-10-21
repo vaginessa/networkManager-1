@@ -148,11 +148,13 @@ namespace networkManager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<Variable> result = Walk(textBox2.Text);
+            string temp = comboBox1.Text;
+            List<Variable> result = Walk(temp);
             int i = 0;
+            comboBox1.Items.Clear();
             while (i < result.Count)
             {
-                textBox2.Text = result[i].Data.ToString();
+                comboBox1.Items.Add(i + ": " + result[i].Data.ToString());
                 i++;
             }
         }
