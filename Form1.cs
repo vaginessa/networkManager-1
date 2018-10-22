@@ -36,7 +36,7 @@ namespace networkManager
                 "1.3.6.1.2.1.2.1.0", //snmpInBadCommunityNames
 
                 // Utilização do link
-                "1.3.6.1.2.1.2.2.1.5.1", //ifSpeed
+                "1.3.6.1.2.1.2.2.1.5.1", //ifSpeed 8
                 "1.3.6.1.2.1.2.2.1.10.1", //ifInOctets
                 "1.3.6.1.2.1.2.2.1.16.1", //ifOutOctets
                 
@@ -47,6 +47,28 @@ namespace networkManager
                 "1.3.6.1.2.1.6.11.0", //tcpOutSegs - tcp enviados
                 "1.3.6.1.2.1.7.1.0", //udpInDatagrams - pacotes udp recebidos
                 "1.3.6.1.2.1.7.4.0" //udpOutDatagrams - pacotes udp enviados
+        };
+        enum IDS_INDEX
+        {
+            SNMP_IN_TOO_BIGS,
+            TCP_CURR_ESTAB,
+            IF_MTU,
+            IF_UNKNOWN_PROTOS,
+            IP_IN_ADDR_ERRORS,
+            TCP_ACTIVE_OPENS,
+            TCP_PASSIVE_OPENS,
+            SNMP_IN_BAD_COMMUNITY_NAMES,
+            IF_SPEED,
+            IF_IN_OCTETS,
+            IF_OUT_OCTETS,
+            IP_OUT_REQUESTS,
+            IP_IN_RECEIVES,
+            TCP_IN_SEGS,
+            TCP_OUT_SEGS,
+            UDP_IN_DATAGRAMS,
+            UDP_OUT_DATAGRAMS,
+
+            MAX_IDS
         };
         public Form1()
         {
@@ -126,20 +148,43 @@ namespace networkManager
         private void timer1_Tick(object sender, EventArgs e)
         {
             string[] results = new string[ids.Length];
+            int ifInOctectsY = 0;
+            int ifInOctectsX = 0;
+            int ifOutOctectsY = 0;
+            int ifOutOctectsX = 0;
+            int bytesRate = 0;
+            int linkUsage = 0;
 
             for (int i = 0; i < ids.Length; i++)
                 results[i] = Get(ids[i]);
+
+            ifInOctectsY = ifInOctectsX;
+            ifOutOctectsY = ifOutOctectsX;
+            ifInOctectsX = Int32.Parse(results[(int)IDS_INDEX.IF_IN_OCTETS]);
+            ifOutOctectsX = Int32.Parse(results[(int)IDS_INDEX.IF_OUT_OCTETS]);
+
+            bytesRate = (ifInOctectsY - ifInOctectsX) + (ifOutOctectsY - ifOutOctectsX);
+            linkUsage = (bytesRate * 8) / Int32.Parse(results[(int)IDS_INDEX.IF_SPEED]);
 
             int j = 0;
             foreach (TabPage tempPage in tabControl1.Controls.OfType<TabPage>())
             {
                 foreach (Chart tempChart in tempPage.Controls.OfType<Chart>())
                 {
-                    tempChart.Series[SERIE].Points.AddY(results[j]);
-                    j++;
+                    if (j == (int)IDS_INDEX.IF_SPEED)
+                    {
+                        tempChart.Series[SERIE].Points.AddY(linkUsage);
+                        j = (int)IDS_INDEX.IP_OUT_REQUESTS;
+                    }
+                    else
+                    {
+                        tempChart.Series[SERIE].Points.AddY(results[j]);
+                        j++;
+                    }
                 }
-            }            
+            }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string result = Get(textBox1.Text).ToString();
